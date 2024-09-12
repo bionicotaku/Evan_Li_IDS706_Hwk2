@@ -3,37 +3,34 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 from mylib.PDFCreator import create_pdf
 
-# Function to calculate statistics
+
 def calculate_stat(data):
     salaryDataDesc = data.describe()
     print(salaryDataDesc)
     return salaryDataDesc
 
-# 读取和处理数据
 salaryData = pd.read_csv("Dataset-salary-2024.csv")
 columns_to_keep = ['work_year', 'experience_level', 'job_title',
                    'salary_in_usd', 'remote_ratio', 'company_size']
 filteredData = salaryData[columns_to_keep]
 
-# 计算统计信息
 stats = calculate_stat(filteredData)
 
-# 创建直方图
+# create a histogram of the salary data
 plt.figure(figsize=(10, 6))
 filteredData['salary_in_usd'].hist(bins=50)
 plt.title('Distribution of Salaries')
 plt.xlabel('Salary')
 plt.ylabel('Frequency')
 
-# 保存图表到BytesIO对象
+# save the plot to a buffer
 img_buffer = BytesIO()
 plt.savefig(img_buffer, format='png')
 img_buffer.seek(0)
 
-# 准备文本内容
+# prepare the text content
 text_content = f"Filtered Data:\n{filteredData.to_string()}\n\nStatistics:\n{stats.to_string()}"
-
-# 创建PDF
+# create the PDF file
 create_pdf("salary_analysis.pdf", text_content, img_buffer)
 
 print("PDF has been created: salary_analysis.pdf")
