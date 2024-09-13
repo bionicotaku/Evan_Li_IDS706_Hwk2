@@ -29,7 +29,7 @@ plt.savefig(img_buffer, format='png')
 img_buffer.seek(0)
 
 # prepare the text content
-text_content = f"Filtered Data:\n{filteredData.to_string()}\n\nStatistics:\n{stats.to_string()}"
+text_content = f"Statistics:\n{stats.to_string()}"
 # create the PDF file
 create_pdf("salary_analysis.pdf", text_content, img_buffer)
 
