@@ -22,3 +22,5 @@ jobs:
         run: make run
       - name: push PDF file to GitHub
         run: make push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
