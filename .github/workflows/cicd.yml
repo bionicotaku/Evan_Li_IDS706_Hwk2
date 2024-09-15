@@ -20,7 +20,12 @@ jobs:
         run: make format
       - name: run program and generate PDF file
         run: make run
-      - name: push PDF file to GitHub
-        run: make push
+      - name: Push changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Update"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
