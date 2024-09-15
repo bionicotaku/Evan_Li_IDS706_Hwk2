@@ -1,8 +1,6 @@
 # Evan_Li_Mini2
 
-[![CI](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/cicd.yml/badge.svg)](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/cicd.yml)
-
-[![PDF](https://img.shields.io/badge/PDF-Salary%20Report-green?logo=adobe-acrobat-reader)](https://github.com/bionicotaku/Evan_Li_Mini2/blob/main/salary_analysis.pdf)
+[![CI](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/cicd.yml/badge.svg)](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/cicd.yml) [![PDF](https://img.shields.io/badge/PDF-Salary%20Report-green?logo=adobe-acrobat-reader)](https://github.com/bionicotaku/Evan_Li_Mini2/blob/main/salary_analysis.pdf)
 
 ## Dataset Overview
 
@@ -21,15 +19,7 @@
 ## Project Features
 
 3. This project includes:
+   - Python script reading the dataset and generate descriptive statistics with data visualization
    - A CI/CD badge indicating the status of our automated workflow
    - The CI/CD workflow automatically pushes the generated PDF report to the main branch
    - Another badge that links directly to the generated PDF file
-
-Here are the badges for this project:
-
-[![CI/CD](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/main.yml/badge.svg)](https://github.com/bionicotaku/Evan_Li_Mini2/actions/workflows/main.yml)
-[![PDF Report](https://img.shields.io/badge/PDF-View%20Report-blue?style=flat-square&logo=adobe-acrobat-reader)](https://github.com/bionicotaku/Evan_Li_Mini2/raw/main/salary_analysis.pdf)
-
-## Analysis
-
-Our analysis includes descriptive statistics and visualizations of the salary data. For detailed insights, please refer to the PDF report linked above.
