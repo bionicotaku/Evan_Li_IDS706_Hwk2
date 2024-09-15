@@ -18,10 +18,8 @@ jobs:
       #   run: make test
       - name: format
         run: make format
-      - name: run program
+      - name: run program and generate PDF file
         run: make run
-      - name: Upload output file
-        uses: actions/upload-artifact@v3
-        with:
-          name: program-output
-          path: salary_analysis.pdf
+
+      - name: push PDF file to GitHub
+        run: make push
