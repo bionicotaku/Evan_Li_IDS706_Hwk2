@@ -41,11 +41,3 @@ text_content = f"Statistics:\n{stats.to_string()}"
 create_pdf("salary_analysis.pdf", text_content, img_buffer)
 
 print("PDF has been created: salary_analysis.pdf")
-
-# from ydata_profiling import ProfileReport
-# import pandas as pd
-
-# df = pd.read_csv("trending-books.csv")
-# profile = ProfileReport(df, title="Trending Books")
-# profile.to_notebook_iframe()
-# profile.to_file("books_data.html")
